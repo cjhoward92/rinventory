@@ -1,0 +1,36 @@
+name: rinventory
+version: "1.0"
+author: Carson Howard <cjhoward92@gmail.com>
+about: The CLI based inventory management system
+args:
+    - verbose:
+        short: v
+        multiple: true
+        help: Sets the level of verbosity (e.g. -v or -vv)
+    - dryrun:
+        required: false
+        long: dryrun
+        help: Tells you what would happen without actually changing the system
+subcommands:
+    - create:
+        about: A set of commands for creating resources
+        version: "1.0"
+        author: Carson Howard <cjhoward92@gmail.com>
+        subcommands:
+            - product:
+                about: Creates a product
+                version: "1.0"
+                author: Carson Howard <cjhoward92@gmail.com>
+                args:
+                    - id:
+                        short: i
+                        long: id
+                        takes_value: true
+                        required: true
+                        help: The product identifier
+                    - name:
+                        short: n
+                        long: name
+                        takes_value: true
+                        required: true
+                        help: The name of the product

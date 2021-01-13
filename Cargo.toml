@@ -1,0 +1,6 @@
+[workspace]
+
+members = [
+  "rinventory-cli",
+  "rinventory-core",
+]
